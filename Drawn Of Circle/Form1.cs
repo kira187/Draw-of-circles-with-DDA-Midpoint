@@ -16,7 +16,7 @@ namespace Drawn_Of_Circle
 
         Point Punto_C;
         Point Punto_R;
-        Bitmap bmp = new Bitmap(480, 360);
+        Pen pen = new Pen(Color.Tomato, 1);
 
         double r = 0;
         int xc, yc;
@@ -24,35 +24,58 @@ namespace Drawn_Of_Circle
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
-            Graphics g = Graphics.FromImage(bmp);
-            g.FillRectangle(Brushes.White, 0, 0, 370, 350);
-            pictureBox1.Image = bmp;
+           
             lbltimedda.Text = "00 : 00";
             lbltimemidpoint.Text = "00 : 00";
             lblcoordenadaC.Text = "(00 , 00)";
             lblcoordenadaR.Text = "(00 , 00)";
             lblradio.Text = "0";
+            panel1.Refresh();
         }
 
         private void CrearCoordenada()
         {
-            int xi, yi, xf, yf;
-            Pen pen = new Pen(Color.Tomato, 3);
-            Graphics Gfx = Graphics.FromImage(bmp);
+            int xc, yc, xr, yr;
+            //Pen pen = new Pen(Color.Tomato, 3);
 
-            xi = Punto_C.X;
-            yi = Punto_C.Y;
+            xc = Punto_C.X;
+            yc = Punto_C.Y;
 
-            xf = Punto_R.X;
-            yf = Punto_R.Y;
+            xr = Punto_R.X;
+            yr = Punto_R.Y;
 
-            Gfx.FillRectangle(Brushes.Tomato, xi - 1, yi - 1, 2, 2);
-            Gfx.FillRectangle(Brushes.Tomato, xf - 1, yf - 1, 2, 2);
-            pictureBox1.Image = bmp;
-
+            panel1.CreateGraphics().DrawEllipse(pen, xc, yc, 2, 2);
+            panel1.CreateGraphics().DrawEllipse(pen, xr, yr, 2, 2);
         }
 
-        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        private double Radio(int xc, int yc, int xr, int yr)
+        {
+            double r = 0;
+            r = Math.Round(Math.Sqrt(Math.Pow((double)xr - (double)xc, 2) + Math.Pow((double)yr - (double)yc, 2)));
+            return Math.Abs(r);
+        }
+
+        private void CirculoDDA(int xc, int yc, double r, int Xr, int yr )
+        {
+              double yk=10;
+            
+            //Console.WriteLine(xc + yc);
+            for (int xk =0; xk < yk; xk++)
+            {
+                yk = Math.Sqrt(Math.Pow(r, 2) - Math.Pow(xk, 2));
+
+                panel1.CreateGraphics().DrawRectangle(pen, (int)yk + xc, xk + yc, 5, 5);//(y,x)           8 Octante
+                panel1.CreateGraphics().DrawRectangle(pen, xk + xc, (int)yk + yc, 5, 5);//(x,y)           7 Octante
+                panel1.CreateGraphics().DrawRectangle(pen, -(xk) + xc, (int)yk + yc, 5, 5);//(-x,y)         6 Octante
+                panel1.CreateGraphics().DrawRectangle(pen, -(int)yk + xc, xk + yc, 5, 5);//(-y,x)      5 Octante
+                panel1.CreateGraphics().DrawRectangle(pen, -(int)yk + xc, -(xk) + yc, 5, 5);//(-y,-x)   4 Octante
+                panel1.CreateGraphics().DrawRectangle(pen, -(xk) + xc, -(int)yk + yc, 5, 5);//(-x,-y)   3 Octante
+                panel1.CreateGraphics().DrawRectangle(pen, xk + xc, -(int)yk + yc, 5, 5);//(x,-y)      2 Octante
+                panel1.CreateGraphics().DrawRectangle(pen, Convert.ToInt64(yk) + xc, -(xk) + yc, 5, 5);//(y,-x)       1 Octante
+            }
+        }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
             if (xc == 0)
             {
@@ -75,44 +98,14 @@ namespace Drawn_Of_Circle
                 lblcoordenadaR.Text = "(" + xr + " , " + yr + ")";
                 lblradio.Text = r.ToString();
 
-                CirculoDDA(xc,yc, r, xr,yr);
+                CirculoDDA(xc, yc, r, xr, yr);
                 CrearCoordenada();
 
-                pictureBox1.Image = bmp;
-               
                 xc = 0;
 
             }
         }
 
-        private double Radio(int xc, int yc, int xr, int yr)
-        {
-            double r = 0;
-            r = Math.Round(Math.Sqrt(Math.Pow((double)xr - (double)xc, 2) + Math.Pow((double)yr - (double)yc, 2)));
-            return Math.Abs(r);
-        }
-
-        private void CirculoDDA(int xc, int yc, double r, int Xr, int yr )
-        {
-              double yk=10;
-            
-            //Console.WriteLine(xc + yc);
-            for (int xk =0; xk < yk; xk++)
-            {
-                yk = Math.Sqrt(Math.Pow(r, 2) - Math.Pow(xk, 2));
-                /*
-                bmp.SetPixel((int)yk + xc  ,  xk+yc, Color.Red);
-                bmp.SetPixel( xk + xc  ,  (int)yk + yc, Color.Red);
-                bmp.SetPixel(-xk + xc  ,  (int)yk + yc, Color.Red);
-                bmp.SetPixel(-(int)yk + xc  ,  xk + yc, Color.Red);
-                bmp.SetPixel(-(int)yk + xc  ,  xk + yc, Color.Red);
-                bmp.SetPixel(-(int)yk + xc  ,  -(xk) + yc, Color.Red);
-                bmp.SetPixel(xk + xc  ,  -(int)yk + yc, Color.Red);
-                bmp.SetPixel((int)yk + xc  ,  -(xk) + yc, Color.Red);
-                */
-            }
-        }
-            
         private void Midpoint(int xc, int yc, int r){
 
             int x = r;

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,18 +39,8 @@
             this.lbltimedda = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblradio = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 78);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(480, 360);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
             // label1
             // 
@@ -74,7 +63,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(537, 104);
+            this.label3.Location = new System.Drawing.Point(536, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 13);
             this.label3.TabIndex = 3;
@@ -83,7 +72,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(540, 208);
+            this.label4.Location = new System.Drawing.Point(536, 185);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 13);
             this.label4.TabIndex = 4;
@@ -92,7 +81,7 @@
             // lblcoordenadaC
             // 
             this.lblcoordenadaC.AutoSize = true;
-            this.lblcoordenadaC.Location = new System.Drawing.Point(566, 139);
+            this.lblcoordenadaC.Location = new System.Drawing.Point(569, 142);
             this.lblcoordenadaC.Name = "lblcoordenadaC";
             this.lblcoordenadaC.Size = new System.Drawing.Size(52, 13);
             this.lblcoordenadaC.TabIndex = 5;
@@ -101,7 +90,7 @@
             // lblcoordenadaR
             // 
             this.lblcoordenadaR.AutoSize = true;
-            this.lblcoordenadaR.Location = new System.Drawing.Point(569, 248);
+            this.lblcoordenadaR.Location = new System.Drawing.Point(569, 219);
             this.lblcoordenadaR.Name = "lblcoordenadaR";
             this.lblcoordenadaR.Size = new System.Drawing.Size(46, 13);
             this.lblcoordenadaR.TabIndex = 6;
@@ -138,7 +127,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(583, 294);
+            this.label5.Location = new System.Drawing.Point(580, 269);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 10;
@@ -147,16 +136,26 @@
             // lblradio
             // 
             this.lblradio.AutoSize = true;
-            this.lblradio.Location = new System.Drawing.Point(594, 318);
+            this.lblradio.Location = new System.Drawing.Point(594, 304);
             this.lblradio.Name = "lblradio";
             this.lblradio.Size = new System.Drawing.Size(0, 13);
             this.lblradio.TabIndex = 11;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Location = new System.Drawing.Point(12, 75);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(503, 363);
+            this.panel1.TabIndex = 12;
+            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblradio);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lbltimedda);
@@ -168,18 +167,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -191,6 +186,7 @@
         private System.Windows.Forms.Label lbltimedda;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblradio;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
