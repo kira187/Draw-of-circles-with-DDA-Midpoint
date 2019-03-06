@@ -40,6 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblradio = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -63,7 +64,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(536, 103);
+            this.label3.Location = new System.Drawing.Point(535, 97);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 13);
             this.label3.TabIndex = 3;
@@ -72,7 +73,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(536, 185);
+            this.label4.Location = new System.Drawing.Point(535, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 13);
             this.label4.TabIndex = 4;
@@ -81,7 +82,7 @@
             // lblcoordenadaC
             // 
             this.lblcoordenadaC.AutoSize = true;
-            this.lblcoordenadaC.Location = new System.Drawing.Point(569, 142);
+            this.lblcoordenadaC.Location = new System.Drawing.Point(561, 135);
             this.lblcoordenadaC.Name = "lblcoordenadaC";
             this.lblcoordenadaC.Size = new System.Drawing.Size(52, 13);
             this.lblcoordenadaC.TabIndex = 5;
@@ -90,7 +91,7 @@
             // lblcoordenadaR
             // 
             this.lblcoordenadaR.AutoSize = true;
-            this.lblcoordenadaR.Location = new System.Drawing.Point(569, 219);
+            this.lblcoordenadaR.Location = new System.Drawing.Point(561, 219);
             this.lblcoordenadaR.Name = "lblcoordenadaR";
             this.lblcoordenadaR.Size = new System.Drawing.Size(46, 13);
             this.lblcoordenadaR.TabIndex = 6;
@@ -98,9 +99,9 @@
             // 
             // btn_clear
             // 
-            this.btn_clear.Location = new System.Drawing.Point(557, 374);
+            this.btn_clear.Location = new System.Drawing.Point(538, 352);
             this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(97, 23);
+            this.btn_clear.Size = new System.Drawing.Size(114, 23);
             this.btn_clear.TabIndex = 7;
             this.btn_clear.Text = "Clear";
             this.btn_clear.UseVisualStyleBackColor = true;
@@ -127,7 +128,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(580, 269);
+            this.label5.Location = new System.Drawing.Point(540, 275);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 10;
@@ -136,7 +137,7 @@
             // lblradio
             // 
             this.lblradio.AutoSize = true;
-            this.lblradio.Location = new System.Drawing.Point(594, 304);
+            this.lblradio.Location = new System.Drawing.Point(591, 275);
             this.lblradio.Name = "lblradio";
             this.lblradio.Size = new System.Drawing.Size(0, 13);
             this.lblradio.TabIndex = 11;
@@ -150,11 +151,21 @@
             this.panel1.TabIndex = 12;
             this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(503, 36);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "00:00";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 450);
+            this.ClientSize = new System.Drawing.Size(672, 450);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblradio);
             this.Controls.Add(this.label5);
@@ -187,6 +198,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblradio;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label6;
     }
 }
 
