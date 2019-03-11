@@ -40,7 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblradio = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -55,7 +55,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(398, 36);
+            this.label2.Location = new System.Drawing.Point(391, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 2;
@@ -110,7 +110,7 @@
             // lbltimemidpoint
             // 
             this.lbltimemidpoint.AutoSize = true;
-            this.lbltimemidpoint.Location = new System.Drawing.Point(115, 36);
+            this.lbltimemidpoint.Location = new System.Drawing.Point(121, 36);
             this.lbltimemidpoint.Name = "lbltimemidpoint";
             this.lbltimemidpoint.Size = new System.Drawing.Size(40, 13);
             this.lbltimemidpoint.TabIndex = 8;
@@ -119,7 +119,7 @@
             // lbltimedda
             // 
             this.lbltimedda.AutoSize = true;
-            this.lbltimedda.Location = new System.Drawing.Point(323, 36);
+            this.lbltimedda.Location = new System.Drawing.Point(334, 36);
             this.lbltimedda.Name = "lbltimedda";
             this.lbltimedda.Size = new System.Drawing.Size(40, 13);
             this.lbltimedda.TabIndex = 9;
@@ -151,21 +151,21 @@
             this.panel1.TabIndex = 12;
             this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
             // 
-            // label6
+            // label7
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(503, 36);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "00:00";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(187, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(106, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Tiempo de ejecucion";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(672, 450);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblradio);
             this.Controls.Add(this.label5);
@@ -198,7 +198,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblradio;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 
